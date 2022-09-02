@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.compass.Compass" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Compass</name>
+    <description>A compass</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="interval" type="integer" required="true" defaultValue="10">
+                <caption>Interval</caption>
+                <description>Interval in seconds at which the attribute will be set</description>
+            </property>
+            <property key="rotation" type="attribute" onChange="onRotationChange">
+                <caption>Rotation</caption>
+                <description>Attribute to store rotation clockwise from North</description>
+                <attributeTypes>
+                    <attributeType name="Decimal"/>
+                </attributeTypes>
+            </property>
+            <property key="timestamp" type="attribute">
+                <caption>Timestamp</caption>
+                <description>Attribute to store utc seconds since Epoch</description>
+                <attributeTypes>
+                    <attributeType name="Integer"/>
+                </attributeTypes>
+            </property>
+            <property key="onRotationChange" type="action">
+                <caption>On change</caption>
+                <description/>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
